@@ -38,14 +38,10 @@ body {
   font-size: 12px;
 }
 
-body,
-p,
-h1,
-h2,
-h3,
-ul {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -100,20 +96,138 @@ textarea {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 641px) and (max-width: 1199px) {
 
+
+  .caption {
+    font-size: 40px;
+  }
+
+  .header-burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin-right: 35px;
+  }
+
+  .header-burger::before,
+  .header-burger::after {
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  
+  .header-burger::before {
+    top: 0;
+  }
+  
+  .header-burger::after {
+    bottom: 0;
+  }
+  .header-burger span {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    top: 9px;
+    left: 0;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .trends {
+  flex-wrap: wrap;
+  }
+
+  .trend-card {
+    width: calc(50%-4px);
+  }
+
+  .trend-card:nth-child(1){
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+
+  .trend-card:nth-child(2){
+    margin-bottom: 4px;
+  }
+
+  .trend-card:nth-child(3){
+  margin-right: 4px;
+  }
+
+  .trend-linck {
+  font-size: 14px;
+  }
+
+  .trend-name-linck {
+    font-size: 17px;
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  /* .products-content {
+    justify-content: center;
+  } */
+
+  .products-content:nth-child(1) {
+    margin-right: 69px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .caption {
+    font-size: 45px;
+  }
+
+.header-burger {
+  display: none;
+}
+
+.trend-card {
+  width: calc(25% - 4px);
+}
+
+.trend-card:nth-of-type(n+2) {
+  margin-left: 4px;
+}
+
+.trend-name-linck {
+  font-size: 20px;
+}
+
+.post {
+  margin-right: 52px;
+}
+
+.products {
+justify-content: space-between;
+}
+
+}
 /*--------------------ШАПКА---------------------------------------------------------------------------------------------------------------------*/
 .header {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
   background-image: url("/imges/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
+  margin-bottom: 56px;
 
   background-size: cover;
   background-color: #666666;
 
   position: relative;
-  z-index: 0;
+  z-index: 2;
 }
 
 .header::before {
@@ -137,18 +251,17 @@ textarea {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  box-sizing: border-box;
 }
 
 /* ------------------------------------------ */
 /* контейнер меню и логотипа */
 .header-nav-wrp {
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin: auto;
   text-align: center;
   padding-top: 29px;
-  box-sizing: border-box;
 
   position: relative;
   z-index: 2;
@@ -158,7 +271,6 @@ textarea {
 
 /* логотип */
 .logo-img {
-  width: 179px;
   height: 41px;
 }
 
@@ -191,22 +303,21 @@ textarea {
 .menu-linck:hover {
   text-decoration: underline;
 }
-
 /* ------------------------------------------ */
 
 /* заголовок */
 .caption {
-  width: 800px;
+  max-width: 800px;
   margin-top: 126px;
   padding-bottom: 146px;
   text-transform: uppercase;
-  font-size: 45px;
   color: #ffffff;
   font-weight: bold;
   text-align: center;
   line-height: 1.8;
-  box-sizing: border-box;
   letter-spacing: 3px;
+  justify-content: center;
+  font-family: inherit;
 
   position: relative;
   z-index: 2;
@@ -215,12 +326,12 @@ textarea {
 /* ------------------------------------------ */
 /* тренды */
 .title-trends {
-  margin-top: 56px;
   font-size: 1.667em;
   font-family: inherit;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 28px;
 }
 
 .title-trends::after {
@@ -234,23 +345,17 @@ textarea {
 }
 
 .trends {
-  margin-top: 28px;
+  margin-bottom: 63px;
   display: flex;
-  max-width: 100%;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 /* блок картинок  */
 .trend-card {
-  width:  calc(25% - 4px);
   min-height: 320px;
   display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
-  box-sizing: border-box;
 
   align-items: end;
+  justify-content: center;
 
 
   position: relative;
@@ -262,9 +367,9 @@ textarea {
   content: "";
   display: block;
   position: absolute;
+  top: 0;
   right: 0;
   left: 0;
-  top: 0;
   bottom: 0;
 
   background-color: #000;
@@ -272,15 +377,10 @@ textarea {
   z-index: 1;
 }
 
-.trend-card:nth-of-type(n+2) {
-  margin-left: 4px;
-}
-
 .flowers {
   background-image: url("../imges/trend1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .sarever {
@@ -302,11 +402,15 @@ textarea {
 }
 
 .trend-content {
-  width: 100%;
+  width: 370px;
   border: 1px solid #83793d;
-  padding: 35px 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 15px;
-  box-sizing: border-box;
   text-align: left;
 
 
@@ -314,25 +418,10 @@ textarea {
   z-index: 2;
 }
 
-.trend-name-forest {
-  width: 236px;
-}
-
-.trend-name-sarever {
-  width: 289px;
-}
-
-.trend-name-mountains {
-  width: 260px;
-}
-
-.trend-name-lemons {
-  width: 365px;
-}
 
 .trend-linck {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   color: #ae9e5f;
   font-weight: bold;
 }
@@ -345,9 +434,10 @@ textarea {
   margin-right: 20px;
 }
 
+
 .trend-name-linck {
   text-transform: uppercase;
-  font-size: 20px;
+  text-align: center;
   font-family: inherit;
   font-weight: bold;
   color: #fff;
@@ -364,10 +454,9 @@ textarea {
 /* контейнер контента */
 
 .post-side-bar {
-  margin-top: 63px;
   display: flex;
-  justify-content: space-between;
   color: #000;
+  margin-bottom: 63px;
 }
 
 /* ------------------------------------------ */
@@ -375,9 +464,7 @@ textarea {
 /* Оформление поста */
 
 .post {
-  width: 845px;
   display: flex;
-  margin-right: 52px;
 }
 
 .post:nth-child(n + 2) {
@@ -407,7 +494,6 @@ textarea {
 }
 
 .post-img {
-  box-sizing: border-box;
   background-color: #fff;
   width: 380px;
   height: 294px;
@@ -490,9 +576,9 @@ textarea {
 
 /* новые посты */
 
-/* .side-bar {
-    width: 280px;
-  } */
+.side-bar {
+    max-width: 280px;
+  }
 .title {
   font-size: 14px;
   font-weight: bold;
@@ -736,39 +822,24 @@ textarea {
 /*----------------------------------------------------------------------------------------------------*/
 
 /* ТОВАРЫ */
-.products-img {
-  padding-top: 28px;
-  display: flex;
-  justify-content: center;
-}
-
-.product-img:nth-child(2),
-.product-img:nth-child(3) {
-  margin-left: 112px;
-}
-
 .products {
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .title-product {
-  padding-top: 25px;
-  padding-bottom: 8px;
+  padding-top: 24px;
+  margin-bottom: 8px;
 }
 
 .products-content {
-  width: 25%;
-  max-height: 232px;
-  outline: 3px solid #d3c59d;
-  outline-offset: 30px;
-  box-sizing: border-box;
+  width: 300px;
 }
 
-.products-content:nth-child(2),
-.products-content:nth-child(3) {
-  margin-left: 120px;
+.product-content {
+  outline: 3px solid #d3c59d;
+  height: 206px;
+  outline-offset: 30px;
 }
 
 .title-product {
@@ -781,10 +852,10 @@ textarea {
   font-size: 15px;
   font-family: "OpenSans", sans-serif;
   font-weight: normal;
+  margin-bottom: 26px;
 }
 
 .prices-content {
-  padding-top: 22px;
   display: flex;
   justify-content: space-between;
 }
@@ -814,16 +885,19 @@ textarea {
   text-transform: uppercase;
 }
 
+.money {
+  position: relative;
+}
+
 .money:before {
   content: '\20BD';
+  position: absolute;
 }
 
 .the-store {
   width: 140px;
   padding-top: 15px;
   padding-bottom: 15px;
-  margin-bottom: 61px;
-  box-sizing: border-box;
 
   font-family: inherit;
   font-size: 14px;
@@ -838,11 +912,6 @@ textarea {
 
 .the-store:hover {
   width: 140px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 61px;
-  box-sizing: border-box;
-
   background-color: #323232;
 }
 
@@ -1000,6 +1069,7 @@ text-decoration: none;
 
 .select {
   width: 100%;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url('../svg/form-arrows.svg') no-repeat;
@@ -1024,6 +1094,7 @@ margin-left: 16px;
 }
 
 .form-radio {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   position: absolute;
@@ -1060,6 +1131,7 @@ margin-left: 16px;
 }
 
 .field {
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: 0px none transparent;
