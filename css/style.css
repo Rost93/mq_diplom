@@ -96,9 +96,7 @@ textarea {
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
-@media (min-width: 641px) and (max-width: 1199px) {
-
-
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
   .caption {
     font-size: 40px;
   }
@@ -146,7 +144,7 @@ textarea {
   }
 
   .trend-card {
-    width: calc(50%-4px);
+    width: calc(50% - 4px);
   }
 
   .trend-card:nth-child(1){
@@ -174,14 +172,22 @@ textarea {
     flex-direction: column;
   }
 
-  /* .products-content {
-    justify-content: center;
-  } */
+  .products-content:nth-child(3) {
+    margin-top: 56px;
+  }
+}
 
-  .products-content:nth-child(1) {
-    margin-right: 69px;
+@media (min-width: 1180px) and (max-width: 1199px) and (orientation: landscape) {
+  .trends {
+    flex-wrap: nowrap;
+  }
+  .trend-card {
+    width: calc(25% - 4px);
   }
 
+  .trend-card:nth-of-type(n+2) {
+    margin-left: 4px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -217,7 +223,7 @@ justify-content: space-between;
 }
 /*--------------------ШАПКА---------------------------------------------------------------------------------------------------------------------*/
 .header {
-  max-width: 100%;
+  width: 100%;
   background-image: url("/imges/banner-bg.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -353,6 +359,7 @@ justify-content: space-between;
 .trend-card {
   min-height: 320px;
   display: flex;
+  flex-grow: 1;
 
   align-items: end;
   justify-content: center;
@@ -455,6 +462,7 @@ justify-content: space-between;
 
 .post-side-bar {
   display: flex;
+  flex-grow: 1;
   color: #000;
   margin-bottom: 63px;
 }
@@ -832,8 +840,13 @@ justify-content: space-between;
   margin-bottom: 8px;
 }
 
+  .product-img {
+    width: 297px;
+  }
+
 .products-content {
-  width: 300px;
+  width: 301px;
+  margin: auto;
 }
 
 .product-content {
