@@ -23,7 +23,6 @@
               <li class="list-item"><a class="menu-linck" href="#0">теги</a></li>
               <li class="list-item"><a class="menu-linck" href="#0">темы</a></li>
               <li class="list-item"><a class="menu-linck" href="#0">контакты</a></li>
-              <li class="list-item"><a class="menu-linck" href="#popup">Фитбек</a></li>
             </ul>
           </nav>
           <div class="header-burger">
@@ -35,7 +34,7 @@
         </div>
       </div>
     </header>
-    <h1 class="title-trends">cейчас в тренде</h1>
+    <h2 class="title-trends">cейчас в тренде</h2>
     <section class="trends">
       <article class="trend-card flowers">
         <header class="trend-content">
@@ -136,7 +135,7 @@
                 </h2>
                 <time class="post-date">10 июня 2019</time><span class="post-author">Неизвестный автор</span>
               </header>
-              <p class="post-text">Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
+              <p class="post-text post-text-last">Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
               <p class="text">Мы составили список лучших летних фестивалей по всему миру.</p>
             </div>
           </article>
@@ -268,14 +267,23 @@
               <li class="categorie-item"><a href="#0" class="item-linck">Йога</a><sup class="desc">8</sup></li>
             </ul>
           </section>
+          <div class="block-linck"><a class="linck-popup" href="#popup">Фитбек</a></div>
         </aside>
       </main>
     </div>
     <div class="container"> 
-      <h1 class="title-trends">Наши изделия</h1>
+      <h2 class="title-trends">Наши изделия</h2>
       <div class="products">
         <section class="products-content">
-            <img src="../imges/shop-item-desk1.jpg" alt="подушка с принтом" class="product-img">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="E:\\mq-diplom\\imges\\shop-item-mobile1.jpg">
+            <source
+              media="(min-width: 641px)"
+              srcset="E:\\mq-diplom\\imges\\shop-item-tablet1.jpg">
+            <img src="E:\\mq-diplom\\imges\\shop-item-desk1.jpg" alt="подушка с принтом" class="product-img">
+          </picture>
             <article class="product-content">
               <h2 class="title-product">Подушки на диван</h2>
               <p class="text-product">Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class="linck-product">здесь</a>.</p>
@@ -289,7 +297,15 @@
           </article>
         </section>
         <section class="products-content">
-              <img src="../imges/shop-item-desk2.jpg" alt="кукла с книгами" class="product-img">
+          <picture>
+            <source
+            media="(max-width: 640px)"
+            srcset="E:\\mq-diplom\\imges\\shop-item-mobile2.jpg">
+            <source
+            media="(min-width: 641px)"
+            srcset="E:\\mq-diplom\\imges\\shop-item-tablet2.jpg">
+            <img src="E:\\mq-diplom\\imges\\shop-item-desk2.jpg" alt="кукла с книгами" class="product-img">
+          </picture>
           <article class="product-content">
             <h2 class="title-product">кукла «зайчик»</h2>
             <p class="text-product">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена  <a href="#0" class="linck-product">весенняя серия постов</a> в блоге и несколько подкастов.</p>
@@ -303,7 +319,15 @@
         </article>
         </section>
         <section class="products-content">
-              <img src="../imges/shop-item-desk3.jpg" alt="элемент декора" class="product-img">
+          <picture>
+            <source
+              media="(max-width: 640px)"
+              srcset="E:\\mq-diplom\\imges\\shop-item-mobile3.jpg">
+            <source
+              media="(min-width: 641px)"
+              srcset="E:\\mq-diplom\\imges\\shop-item-tablet3.jpg">
+            <img src="E:\\mq-diplom\\imges\\shop-item-desk3.jpg" alt="элемент декора" class="product-img">
+          </picture>
               <article class="product-content">
           <h2 class="title-product">Шестиугольная рамка</h2>
           <p class="text-product">Необычная рамка для украшения дома из видео <a href="#0" class="linck-product">«Как сделать рамку из подручных средств за 30 минут»</a></p>
@@ -326,14 +350,14 @@
           <li class="social-item pinterest"><a href="#0" class="social-linck visually-hidden">пинтэрест</a></li>
           <li class="social-item tumblr"><a href="#0" class="social-linck visually-hidden">тиндер</a></li>
         </ul>
-        <a href="#0" class="copyrights">Copyright © 2009–2019 City Blog LLC.</a>
+        <a href="#0" class="copyrights">Copyright ©&nbsp;2009–2019 City&nbsp;Blog&nbsp;LLC.</a>
       </footer>
     </div>
     <div id="popup" class="popup">
       <div class="popup-body">
         <div class="popup-content">
           <a href="#" class="popup-close">X</a>
-          <h1 class="popup-title title-trends">ваш фидбек</h1>
+          <h2 class="popup-title title-trends">ваш фидбек</h2>
           <form action="" method="post" class="popup-form">
             <div class="form-row">
               <div class="form-item">
