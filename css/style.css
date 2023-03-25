@@ -307,6 +307,14 @@ textarea {
     justify-content: space-between;
   }
 
+  .post-img:nth-child(n) {
+    margin-bottom: 16px;
+  }
+
+  .post-img:last-child {
+    margin-bottom: 0;
+  }
+
   .post {
     flex-direction: column;
   }
@@ -315,20 +323,13 @@ textarea {
     margin-bottom: 0;
   }
 
-  .post-img:nth-child(n) {
-    margin-bottom: 16px;
-  }
-
-  .products-content:nth-child(3) {
-    margin-top: 56px;
-  }
-
-  .post-img:last-child {
-    margin-bottom: 0;
-  }
-
   .products {
     margin-bottom: 50px;
+  }
+
+  .products-content:nth-child(1),
+  .products-content:nth-child(2) {
+    margin-bottom: 56px;
   }
 
   .social-list {
@@ -337,7 +338,7 @@ textarea {
 
 }
 
-@media (min-width: 896px) and (max-width: 1199px) and (orientation: landscape) {
+@media (min-width: 696px) and (max-width: 1199px) and (orientation: landscape) {
   .header {
     background-image: url('../imges/banner-bg-tablet.jpg');
     min-height: 391px;
@@ -386,6 +387,10 @@ textarea {
 
   .post:last-child {
     margin-bottom: 0;
+  }
+
+  .products-content:nth-child(n) {
+    margin-bottom: 56px;
   }
 
   .products {
