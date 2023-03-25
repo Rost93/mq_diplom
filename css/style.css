@@ -1252,7 +1252,6 @@ margin-bottom: 0;
   left: 0;
   z-index: 32;
   opacity: 0;
-  visibility: hidden;
 }
 
 .popup:target {
@@ -1262,26 +1261,21 @@ margin-bottom: 0;
 
 .popup-content {
   max-width: 392px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  -moz-backdrop-filter: blur(10px);
-  -ms-backdrop-filter: blur(10px);
-  color: #fff;
-  border: 2px solid #000;
-  border-radius: 10px;
+  color: #000;
   position: relative;
 }
 
 .popup-close {
   position: absolute;
   right: 10px;
-  top: 10px;
-  font-size: 20px;
-  color: #b59f5b;
+  top: -50px;
+  font-size: 30px;
+  color: #fff;
   text-decoration: none;
 }
 
 .popup-body {
+  background-color: #fff;
   min-height: 590px;
   display: flex;
   margin: auto;
@@ -1297,8 +1291,7 @@ margin-bottom: 0;
   content: "";
   width: 66px;
   height: 2px;
-  opacity: 0.4;
-  color: #b59f5b;
+  color: #83793d;
 }
 
 .popup-form {
