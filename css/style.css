@@ -232,6 +232,11 @@ textarea {
     display: none;
   }
 }
+@media (min-width: 1199px) {
+  .header__menu {
+    margin-left: 46px;
+  }
+}
 /*---------------------------------------------*/
 /*меню бургер*/
 @media (max-width: 640px) {
@@ -591,6 +596,11 @@ textarea {
 
   .post-side-bar {
     justify-content: space-evenly;
+  }
+}
+@media screen and (min-width: 1199px) {
+  .post-side-bar {
+    justify-content: space-between;
   }
 }
 
@@ -1230,7 +1240,6 @@ margin-bottom: 0;
   align-items: center;
 }
 @media (max-width: 640px) {
- 
   .social__list {
     margin-bottom: 47px;
   }
@@ -1301,18 +1310,18 @@ margin-bottom: 0;
   z-index: 32;
   opacity: 0;
   visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .popup__close {
   position: absolute;
-  right: 10px;
-  top: -50px;
+  right: 8px;
   font-size: 30px;
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
-.popup:target {
+.popup.active {
   opacity: 1;
   visibility: visible;
 }
@@ -1500,6 +1509,7 @@ margin-bottom: 0;
 /* форма обратной связи */
 .side-bar__form {
   outline: none;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: none;

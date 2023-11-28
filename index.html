@@ -23,6 +23,7 @@
               <li class="header__menu-item"><a class="header__menu-linck" href="#0">теги</a></li>
               <li class="header__menu-item"><a class="header__menu-linck" href="#0">темы</a></li>
               <li class="header__menu-item"><a class="header__menu-linck" href="#0">контакты</a></li>
+              <li class="header__menu-item"><a id="open-popup" class="header__menu-linck" href="#">отзыв</a></li>
             </ul>
           </nav>
           <div class="header__burger">
@@ -270,7 +271,6 @@
               <li class="categories__item"><a href="#0" class="categories__linck">Йога</a><sup class="desc">8</sup></li>
             </ul>
           </section>
-          <div class="block-linck"><a class="linck-popup" href="#popup">Фитбек</a></div>
         </aside>
       </main>
     </div>
@@ -359,7 +359,7 @@
     <div id="popup" class="popup">
       <div class="popup__body">
         <div class="popup__content">
-          <a href="#" class="popup__close">X</a>
+          <a href="#" id="close-popup" class="popup__close">X</a>
           <h2 class="popup__title title">ваш фидбек</h2>
           <form action="#" method="post" class="popup__form">
             <div class="popup__form-row">
@@ -399,5 +399,6 @@
         </div>
       </div>
     </div>
+    <script src="js/popup.js"></script>
 </body>
 </html>
