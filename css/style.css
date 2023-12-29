@@ -240,7 +240,6 @@ textarea {
 /*---------------------------------------------*/
 /*меню бургер*/
 @media (max-width: 640px) {
- 
   .header__burger {
     display: block;
     position: relative;
@@ -278,7 +277,6 @@ textarea {
   }
 }
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) { 
-  
   .header__burger {
     display: block;
     position: relative;
@@ -314,7 +312,6 @@ textarea {
   }
 }
 @media (min-width: 1200px) {
-
   .header__burger {
     display: none;
   }
